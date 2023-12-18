@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Carousel container */
+    .carousel {
+      width: 90%px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid black;
+      margin: 0 40px;
+    }
+
+    /* Carousel slides */
+    .carousel-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      border: 1px solid black;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      border: 1px solid black;
+      background-color: tomato;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Navigation buttons */
+    .carousel-prev,
+    .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .carousel-prev {
+      left: 10px;
+    }
+
+    .carousel-next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-slide">
+        <h1>Slide 1</h1>
+      </div>
+      <div class="carousel-slide">
+        <h1>Slide 2</h1>
+      </div>
+      <div class="carousel-slide">
+        <h1>Slide 3</h1>
+      </div>
+    </div>
+
+    <div class="carousel-prev">&lt;</div>
+    <div class="carousel-next">&gt;</div>
+  </div>
+
+  <script>
+    // JavaScript for carousel functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".carousel");
+      const carouselInner = carousel.querySelector(".carousel-inner");
+      const slides = carousel.querySelectorAll(".carousel-slide");
+      const prevBtn = carousel.querySelector(".carousel-prev");
+      const nextBtn = carousel.querySelector(".carousel-next");
+
+      let currentIndex = 0;
+      const slideWidth = slides[0].offsetWidth;
+
+      // Update carousel transform property
+      const updateCarousel = () => {
+        carouselInner.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+      };
+
+      // Move to previous slide
+      const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+      };
+
+      // Move to next slide
+      const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+      };
+
+      // Attach click event listeners to buttons
+      prevBtn.addEventListener("click", prevSlide);
+      nextBtn.addEventListener("click", nextSlide);
+    });
+  </script>
+</body>
+</html>

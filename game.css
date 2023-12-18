@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav{
+    width: 100%;
+}
+
+.nav-title{
+    height: 60px;
+    background-color: #267184;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    font-size: 2rem;
+    font-family: 'Chela One', cursive;
+}
+
+
+.fa-bots{
+    color: #e63946;
+    font-size: 2.5rem;
+}
+
+
+.menu{
+    background-color: #8ecae6;
+    font-family: 'Chela One', cursive;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 10px#6eacc9;
+}
+
+.back-home, .multi-player, .ai{
+    margin-left: 40px;
+}
+
+.ai :hover{
+    color: tomato;
+    text-shadow: 0px 0px 2px #f06c77;
+}
+
+.multi-player :hover{
+    color: #e63946;
+}
+
+.back-home :hover{
+    color: #e63946;
+}
+
+body{
+    background-color: #ebedd5;
+}
+
+/* Game CSS */
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    position: relative;
+    margin: 40px 0px 0px 0px 0px;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+
+.box-text{
+    font-size: 100px;
+    font-family: 'Chela One', cursive;
+    
+
+}
+.box{
+    border: 2px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.game :hover{
+    background-color: #dde7ec;
+}
+
+.bt{
+    border-top: none;
+}
+.br{
+    border-right: none;
+}
+.bl{
+    border-left: none;
+}
+.bb{
+    border-bottom: none;
+}
+
+.line{
+    opacity: 0;
+    z-index: 1000;
+    background-color: #073d57;
+    border-radius: 10px;
+    width: 350px;
+    height: 5px;
+    position: absolute;
+    top: 65px;
+    left: 25px;
+    /* transform: translateY(135px) translateX(0) rotate(0); */
+    /* transform: translateY(135px) translateX(0) rotate(-45deg); */
+    transition: opacity 1s .5s ease;
+}
+
+.info{
+    margin: 40px;
+    display: grid;
+    color: grey;
+    font-size: 3rem;
+    font-family: 'Chela One', cursive;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.chance{
+    font-size: 1.5rem;
+    color: #023047;
+}
+
+#reset{
+    font-size: 1.2rem;
+    width: 80px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #84c2cd;
+    color: whitesmoke;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#reset:hover{
+    box-shadow: 0px 0px 5px #5bb6e0;
+    background-color: #219ebc;
+}
+
+.contain{
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+.gif{
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid black ; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: flex-start;
+}
+
+.gif img{
+    
+    width: 0;
+    transition: width 1s 1s ease-in-out;
+}
+
+
+.msg{
+    margin-top: 0px;
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 780px){
+    .gif{
+        position: relative;
+        bottom: 490px;
+    }
+    
+}

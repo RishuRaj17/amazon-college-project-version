@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movie-container{
+            width: 80%;
+            height: 300px;
+            /* border: 1px solid #0f1111; */
+            background-color: #222626dc;
+            margin: 100px;
+            box-shadow: 0px 0px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .trailer{
+            position: relative;
+            transform: translate(0%,60%);
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 0px 15px;
+            border-radius: 5px;
+            background-image: linear-gradient(to right, rgba(112, 112, 112, 0.006), rgb(12, 131, 205));
+        }
+
+        .poster{
+            height: 179px;
+            width: 140px;
+            transform: translate(0%,-60%);
+            
+            box-shadow: 0px 0px 15px;
+            border-radius: 5px;
+            padding: 12px;
+            background-color: rgb(157, 157, 157);  
+            background-image: url(bloody.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /* background-blend-mode: multiply; */
+        }
+
+        .trailer-title{
+            width: 600px;
+            height: 200px;
+            padding: 10px;
+            margin: 10px;
+            /* font-family: luc; */
+            font-weight: bolder;
+            /* background-color: rgb(21, 96, 161); */
+            color: rgb(218, 217, 217);
+            /* overflow: hidden; */
+            /* display: flex;
+            position: relative;
+            transform: translate(-200%); */
+        }
+
+        button{
+            width: 150px;
+            /* height: 30px; */
+            padding: 5px;
+            background-color: rgb(24, 116, 221);
+            color: whitesmoke;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            display: flex;
+            transform: translate(80%,-30%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="movie-container">
+        
+        <div class="poster">
+            <!-- <div class="movie-poster"><img src="bloody.webp" width="150px" alt=""></div> -->
+        </div>
+
+        <div class="trailer-title">
+            <h5>SHAJID KAPOOR is</h5>
+            <h1>BLOODY DADDY</h1>
+            <h4>2 hr 1 min | Action | 2023 | U/A 16+</h4>
+            <div class="discription">
+                <h4>Sumair Azad and his friend, Jaggi, steal Sikandar Chowdhary's cocaine bag. As a result, Sikandar kidnaps Sumair's son, but things take a turn when Sumair loses the cocaine bag. Watch the blockbuster movie, Bloody Daddy, to know what happens next!</h4>
+            </div>
+           
+        </div>
+        <button><i class="fa-regular fa-circle-play"></i>&nbsp;Watch Now</button>
+
+        <!-- <div class="watch-btn">
+        </div> -->
+        <div class="trailer">
+            <iframe src="https://www.youtube.com/embed/ZwOeTu6ciP8" frameborder="0" ></iframe>
+        </div>
+    </div>
+</body>
+</html>
